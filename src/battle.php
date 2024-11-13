@@ -372,7 +372,7 @@ require_once 'header.php';
 		</div>
 	</div>
 
-	<div class="section white battle-results matrix article">
+	<div class="section white battle-results matrix article" style="width: 96vw; position: relative; left: calc(-48vw + 48%);">
 
 		<a class="toggle active" href="#">Matchups <span class="arrow-down">&#9660;</span><span class="arrow-up">&#9650;</span></a>
 
@@ -403,7 +403,7 @@ require_once 'header.php';
 		</div>
 	</div>
 
-	<div class="section white battle-results matrix article">
+	<div class="section white battle-results matrix article" style="width: 96vw; position: relative; left: calc(-48vw + 48%);">
 
 		<a class="toggle active" href="#">Differences <span class="arrow-down">&#9660;</span><span class="arrow-up">&#9650;</span></a>
 
