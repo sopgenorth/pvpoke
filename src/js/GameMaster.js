@@ -211,7 +211,6 @@ var GameMaster = (function () {
 			var battle = new Battle();
 
 			$.each(object.data.pokemon, function(index, poke){
-				console.log(poke.speciesId);
 				if(poke.speciesId.indexOf("_shadow") > -1){
 					return;
 				}
@@ -278,11 +277,9 @@ var GameMaster = (function () {
 
 					if(!pokemon.hasTag("mega")){
 						entry = JSON.parse(JSON.stringify(entry)); // Your clones are very impressive, you must be very proud
-
 						entry.speciesId += "_shadow";
 						entry.speciesName += " (Shadow)";
-						entry.tags.splice(entry.tags.indexOf("shadoweligible"), 1);
-						entry.tags.splice(entry.tags.indexOf("wildlegendary"), 1);
+						entry.tags = entry.tags.filter(t => t != "wildlegendary" && t != "shadoweligible");
 						entry.tags.push("shadow");
 
 						// Adjust IDs for evolutions
@@ -410,6 +407,10 @@ var GameMaster = (function () {
 					defaultIVs["cp1500"] = [22, 3, 13, 12];
 				}
 
+				if(pokemon.speciesId == "dhelmise"){
+					defaultIVs["cp1500"] = [20, 1, 4, 4];
+				}
+
 				if(pokemon.speciesId == "medicham"){
 					defaultIVs["cp1500"] = [49, 7, 15, 14];
 				}
@@ -440,6 +441,10 @@ var GameMaster = (function () {
 			if(nearCapCP < league){
 				floor = 12;
 				defaultIndex = 7;
+			}
+
+			if(pokemon.hasTag("legendary") && pokemon.hasTag("shadow")){
+				floor = 6;
 			}
 
 			pokemon.setLevelCap(levelCap);

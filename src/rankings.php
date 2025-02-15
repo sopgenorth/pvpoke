@@ -71,6 +71,10 @@ switch($cup){
 		$league = 'Devon Pillar Cup';
 		break;
 
+	case "ingot":
+		$league = 'Devon Ingot Cup';
+		break;
+
 	case "devonchampionship":
 		$league = 'devonchampionship';
 		break;
@@ -83,36 +87,48 @@ switch($cup){
 		$league = 'Catch Cup';
 		break;
 
-	case "willpower":
-		$league = 'Willpower Cup';
+	case "love":
+		$league = 'Love Cup';
 		break;
 
 	case "little":
 		$league = 'Little Cup';
 		break;
 
+	case "littlejungle":
+		$league = 'Little Jungle Cup';
+		break;
+
 	case "mega":
 		$league = 'Mega Master League';
 		break;
 
-	case "polaris":
-		$league = 'Battle Frontier (Polaris)';
-		break;
-
-	case "wasteland":
-		$league = 'Battle Frontier (Wasteland)';
+	case "gbinvitational":
+		$league = 'Gymbreakers Invitational';
 		break;
 
 	case "battlefrontiergreat":
-		$league = 'Battle Frontier (Master)';
+		$league = 'Battle Frontier (Great)';
 		break;
 
 	case "battlefrontierultra":
-		$league = 'Battle Frontier (Master)';
+		$league = 'Battle Frontier (Ultra)';
 		break;
 
 	case "battlefrontiermaster":
 		$league = 'Battle Frontier (Master)';
+		break;
+
+	case "cascade":
+		$league = 'Battle Frontier (Cascade)';
+		break;
+
+	case "iridescent":
+		$league = 'Battle Frontier (Iridescent)';
+		break;
+
+	case "solstice":
+		$league = 'Battle Frontier (Solstice)';
 		break;
 
 	case "littlecatch":
